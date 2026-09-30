@@ -9,7 +9,8 @@
 
 <hr>
 <h2>👋 About Me</h2>
-<p>I'm a SOC Analyst L2 with ~3 years of experience in 24x7 enterprise security operations at an MSSP, working across Microsoft Defender XDR, Microsoft Sentinel, Google SecOps (Chronicle), and Proofpoint. This repository is where I document detection logic, threat research, and incident response methodology outside of client-specific work — built to demonstrate practical detection engineering thinking, not just tool familiarity.</p>
+<p>I'm a SOC Analyst L2 with ~3 years of experience in 24x7 enterprise security operations at an MSSP, working across Microsoft Defender XDR, Microsoft Sentinel, Google SecOps (Chronicle), and Proofpoint. This portfolio demonstrates my hands-on detection engineering, incident response methodology, and threat intelligence synthesis.</p>
+
 <h3>🧰 Stack</h3>
 <p><img src="https://img.shields.io/badge/-Microsoft%20Defender%20XDR-0078D4?style=flat-square&amp;logo=microsoft&amp;logoColor=white" alt="Defender XDR">
 <img src="https://img.shields.io/badge/-Microsoft%20Sentinel-0078D4?style=flat-square&amp;logo=microsoft&amp;logoColor=white" alt="Sentinel">
@@ -29,38 +30,46 @@
 <img src="https://img.shields.io/badge/AWS-Certified%20Cloud%20Practitioner-FF9900?style=flat-square" alt="AWS CCP"></p>
 <hr>
 <h2>🎯 What This Repo Demonstrates</h2>
-<p>This isn't a collection of copy-pasted queries — every piece here reflects my own reasoning about <em>why</em> a detection is written the way it is, what it maps to in MITRE ATT&amp;CK, and where the false-positive tradeoffs live. Everything referencing real-world incidents draws only from <strong>publicly reported</strong> threat intel; no client data, proprietary employer detection logic, or confidential information appears anywhere in this repo.</p>
+<p>This isn't a collection of copy-pasted queries — every piece here reflects my own reasoning about <em>why</em> a detection is written the way it is, what it maps to in MITRE ATT&CK, and what edge cases might trigger false alarms. Each technique includes the full story: from plain-English explanation to interactive puzzles, sample logs, detection rules (KQL + YARA-L), and tuning guidance.</p>
+
 <h2>🗂️ Repository Structure</h2>
-<pre><code>soc-detection-portfolio/
-├── detections/            # Standalone KQL / YARA-L detection rules, one technique per folder
-│   ├── oauth-token-abuse/
-│   ├── impossible-travel/
-│   └── living-off-the-land/
-├── campaign-analysis/      # Deep-dives on named, publicly reported threat campaigns
-│   ├── klue-oauth-supply-chain/
-│   └── unc3886-singapore-telco/
-├── methodology/            # General IR/detection frameworks and process writeups
-│   └── multi-vector-ir-recovery/
-├── threat-intel-notes/      # Shorter trend/summary writeups synthesizing public CTI
-│   └── 2026-07-supply-chain-trends.md
-└── homelab/                # Attack simulations (Atomic Red Team) + logs + detections validated end-to-end
-    └── atomic-red-team-t1550/
+<pre><code>SOC-Detection-Engineering-Portfolio/
+├── attack-stories/              # Interactive MITRE ATT&CK Enterprise learning
+│   ├── 01-reconnaissance/
+│   │   ├── T1595-active-scanning/
+│   │   └── T1598-phishing-for-information/
+│   ├── 02-resource-development/
+│   ├── 03-initial-access/
+│   ├── 04-execution/
+│   ├── 05-persistence/
+│   ├── 06-privilege-escalation/
+│   ├── 07-defense-evasion/
+│   ├── 08-credential-access/
+│   ├── 09-discovery/
+│   ├── 10-lateral-movement/
+│   ├── 11-collection/
+│   ├── 12-command-and-control/
+│   ├── 13-exfiltration/
+│   └── 14-impact/
+├── campaign-analysis/           # Deep-dives on named threat campaigns
+├── Methodology/                 # General IR/detection frameworks and process writeups
+│   └── Multi-Vector Incident Response &amp; Recovery/
+├── homelab/                     # Attack simulations + end-to-end validated detections
+└── Readme.md
 </code></pre>
 
-Folder | What's inside
--- | --
-detections/ | Each folder = one technique. Contains a detection.kql and/or detection.yaral query plus a README.md with MITRE mapping, tuning notes, and a sample log.
-campaign-analysis/ | Named, publicly reported campaigns broken down into TTPs, cited IOCs, and matching detection logic.
-methodology/ | Process-level writeups — incident response frameworks, remediation workflows, and the reasoning behind them (not tied to a specific named campaign). 
-threat-intel-notes/ | Periodic shorter-form trend summaries across multiple public sources.
-homelab/ | Simulated attacks (via Atomic Red Team or similar) with raw logs and the detection logic that catches them — fully self-contained, zero client dependency.
+| Folder | What's inside |
+| -- | -- |
+| attack-stories/ | **Featured section.** Each MITRE ATT&CK Enterprise tactic (14 total) with non-technical stories, formal definitions, and techniques with interactive "spot the anomaly" puzzles, sample logs, detection rules (KQL + YARA-L), and false positive guidance. |
+| campaign-analysis/ | Named, publicly reported campaigns broken down into TTPs, cited IOCs, and matching detection logic. |
+| Methodology/ | Process-level writeups — incident response frameworks, remediation workflows, and the reasoning behind them (not tied to a specific named campaign). |
+| homelab/ | Simulated attacks (via Atomic Red Team or similar) with raw logs and the detection logic that catches them — fully self-contained, zero client dependency. |
 
 
 <h2>📌 A Note on Sourcing</h2>
-<p>Any IOC, technique detail, or campaign fact referenced in this repo is drawn from and cited to public vendor/CTI reporting (e.g., Microsoft, Mandiant, CrowdStrike blogs). Detection logic is my own, written to be illustrative of the technique.</p>
+<p>Any IOC, technique detail, or campaign fact referenced in this repo is drawn from and cited to public vendor/CTI reporting (e.g., Microsoft, Mandiant, CrowdStrike blogs). Detection logic is my own synthesis, tested and refined through real SOC operations. I do not include any proprietary client-specific data, indicators, or internal processes.</p>
 <hr>
-<p><strong>📫 Connect with me on <a href="https://linkedin.com/in/inti-hemanth/">LinkedIn</a></strong> — I write a running series on practitioner-level SOC analysis and detection engineering there too.</p>
+<p><strong>📫 Connect with me on <a href="https://linkedin.com/in/inti-hemanth/">LinkedIn</a></strong> — I write a running series on practitioner-level SOC analysis and detection engineering topics.</p>
 </body></html><!--EndFragment-->
 </body>
 </html>
-
