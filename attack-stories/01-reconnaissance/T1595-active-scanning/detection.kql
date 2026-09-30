@@ -1,0 +1,3 @@
+// T1595: Active Scanning
+// KQL detection rule for identifying active scanning behavior
+// Platform: Microsoft Sentinel, Defender for Cloud

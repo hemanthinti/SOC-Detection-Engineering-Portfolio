@@ -1,0 +1,3 @@
+// T1598: Phishing for Information
+// KQL detection rule for identifying phishing-for-information campaigns
+// Platform: Microsoft Sentinel, Defender for Email
