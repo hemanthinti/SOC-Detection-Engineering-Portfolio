@@ -1,0 +1,3 @@
+// T1595: Active Scanning
+// YARA-L detection rule for identifying active scanning behavior
+// Platform: Chronicle SecOps

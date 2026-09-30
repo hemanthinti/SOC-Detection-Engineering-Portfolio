@@ -1,0 +1,3 @@
+// T1598: Phishing for Information
+// YARA-L detection rule for identifying phishing-for-information campaigns
+// Platform: Chronicle SecOps
